@@ -6,6 +6,8 @@ public class Main {
         list.insert(4);
         list.insert(8);
 
+        list.insertAtStart(50);
+        list.insertAtAnyLocation(2,43);
         list.show();
 
     }
