@@ -7,7 +7,7 @@ public class Main {
         list.insert(8);
 
         list.insertAtStart(50);
-        list.insertAtAnyLocation(2,43);
+        list.insertAtAnyLocation(0,43);
         list.show();
 
     }
