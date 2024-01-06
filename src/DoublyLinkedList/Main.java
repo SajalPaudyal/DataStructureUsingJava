@@ -13,6 +13,9 @@ public class Main {
 
         doublylist.addAtStart(7);
         doublylist.display();
+
+        doublylist.insertAfter(11,3);
+        doublylist.display();
     }
 
 }

@@ -48,24 +48,22 @@ public class DoublyLinkedList {
         }
     }
 
-    public void insertAt(int data, int key){
-        DoublyNode current = head;
-        while(current != null && current.data != key){
-            current = current.next;
+    public void insertAfter(int data, int key) {
+        DoublyNode currentNode = head;
+        while (currentNode != null && currentNode.data != key) {
+            currentNode = currentNode.next;
         }
-        if(current == null){
+        if (currentNode == null) {
             System.out.println("Key not found");
-        }
-        else {
+        } else {
             DoublyNode newNode = new DoublyNode(data);
-            newNode.next = current.next;
-            current.next = newNode;
-            newNode.previous = current;
+            newNode.next = currentNode.next;
+            currentNode.next = newNode;
+            newNode.previous = currentNode;
 
-            if(newNode.next != null){
-                newNode.next = newNode.previous;
-            }
-            else{
+            if (newNode.next != null) {
+                newNode.previous = newNode.next;
+            } else {
                 tail = newNode;
             }
         }
