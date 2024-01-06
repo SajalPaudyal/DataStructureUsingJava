@@ -22,6 +22,8 @@ public class LinkedListExample {
         //add the element at the start of the list
         numberList.offer(2);
 
+        //Also has add, get,contains,remove,size methods similar to that of ArrayList
+
         int firstNumber = numberList.peek(); //just look into the first value of the LinkedList and store it in the variable firstNumber
         int poppedFirstNumber  = numberList.poll(); //look into the first value, pop it from the list and return the value
         System.out.println(firstNumber);
