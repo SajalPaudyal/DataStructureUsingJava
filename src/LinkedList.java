@@ -51,5 +51,19 @@ public class LinkedList {
         }
     }
 
-
+    public void deleteAtALocation(int index){
+       if(index == 0){
+           head = head.next;
+       }
+       else{
+           Node n = head;
+           Node tempNode = null;
+           for(int i =0; i< index -1; i++){
+               n = n.next;
+           }
+           tempNode = n.next;
+           n.next = tempNode.next;
+           tempNode = null;
+       }
+    }
 }

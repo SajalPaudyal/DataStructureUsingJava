@@ -8,6 +8,12 @@ public class Main {
 
         list.insertAtStart(50);
         list.insertAtAnyLocation(0,43);
+
+        list.show();
+
+        System.out.println("After deletion");
+
+        list.deleteAtALocation(2);
         list.show();
 
     }
