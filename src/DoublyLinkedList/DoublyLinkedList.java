@@ -69,6 +69,19 @@ public class DoublyLinkedList {
         }
     }
 
+    public void deleteSelectedNode(int key){
+        if(head == null){
+            System.out.println("THe list is empty");
+        }
+        else{
+            DoublyNode currentNode = head;
+            while(currentNode != null && currentNode.data != key){
+                currentNode = currentNode.next;
+
+            }
+        }
+    }
+
     public void display(){
         DoublyNode current = head;
         if(head == null){
