@@ -67,6 +67,45 @@ public class BinarySearchTree {
 
     }
 
+    public void deleteData(int data){
+            root = deleteSingleData(root, data);
+    }
+
+    public Node deleteSingleData(Node root, int data){
+        if(root == null){
+            return root;
+        }
+
+        if(data < root.data){
+            root.left = deleteSingleData(root.left, data);
+        } else if (data > root.data) {
+            root.right  = deleteSingleData(root.right, data);
+        }
+
+        else{
+            if(root.left == null){
+                return root.right;
+            }
+            else if(root.right == null){
+                return root.left;
+            }
+
+            root.data = smallestNode(root.right);
+
+            root.right = deleteSingleData(root.right, root.data);
+        }
+        return root;
+    }
+
+    public int smallestNode(Node root){
+        int smallestValue = root.data;
+        while(root.left != null){
+            smallestValue= root.left.data;
+            root = root.left;
+        }
+        return smallestValue;
+    }
+
     public static void main(String[] args){
         BinarySearchTree newTree = new BinarySearchTree();
         newTree.insert(4);
@@ -76,6 +115,16 @@ public class BinarySearchTree {
         newTree.insert(3);
         newTree.insert(5);
         newTree.insert(7);
+
+        newTree.showOrder();
+
+        System.out.println("-------------");
+
+        newTree.showPath(7);
+
+        System.out.println("-------------");
+
+        newTree.deleteData(4);
 
         newTree.showOrder();
 
