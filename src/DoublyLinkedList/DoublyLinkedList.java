@@ -87,7 +87,6 @@ public class DoublyLinkedList {
         if(head == null){
             System.out.println("List is empty");
         }
-        System.out.println("Nodes of doubly linked list: ");
         while(current != null) {
             System.out.println(current.data);
             current = current.next;

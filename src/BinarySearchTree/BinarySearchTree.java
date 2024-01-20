@@ -116,20 +116,45 @@ public class BinarySearchTree {
         newTree.insert(5);
         newTree.insert(7);
 
+        System.out.println("----- Print the list -----");
         newTree.showOrder();
 
-        System.out.println("-------------");
+        System.out.println("----- Show the path to element : 7");
 
         newTree.showPath(7);
 
-        System.out.println("-------------");
+        System.out.println("----- Delete the element 4 -----");
 
         newTree.deleteData(4);
 
         newTree.showOrder();
 
-        System.out.println("-------------");
+        System.out.println("----- Show the path to element 7 after deletion -----");
 
         newTree.showPath(7);
     }
 }
+
+/*
+OUTPUT
+
+----- Print the list -----
+1
+2
+3
+4
+5
+6
+7
+----- Show the path to element : 7
+4 6 7
+----- Delete the element 4 -----
+1
+2
+3
+5
+6
+7
+----- Show the path to element 7 after deletion -----
+5 6 7
+ */

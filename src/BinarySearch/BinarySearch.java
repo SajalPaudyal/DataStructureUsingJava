@@ -40,11 +40,23 @@ public class BinarySearch {
     }
 
     public static void main(String[] args){
-        int[] arraylist = {1,2,3,4,3,2,1};
+        int[] arraylist = {9,2,3,4,3,2,7};
         int key = 4;
 
         int result = binarySearchAlgo(arraylist, key);
-        System.out.println(result);
+        if(result == -1){
+            System.out.println("The number is not in the given list");
+        }
+        else{
+            System.out.println("The number is in "+ result+" position");
+        }
 
     }
 }
+
+/*
+OUTPUT
+
+The number is in 4 position
+
+ */

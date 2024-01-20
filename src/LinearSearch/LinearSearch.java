@@ -26,7 +26,7 @@ public class LinearSearch {
 
     public static void main(String[] args){
         int [] list = {1,2,3,4,5};
-        int key = 9;
+        int key = 4;
 
       int result =   LinearSearchAlgo(list, key);
 
@@ -36,3 +36,8 @@ public class LinearSearch {
       else System.out.println("The element "+ key+ " is at index of "+ result);
     }
 }
+
+/*
+OUTPUT
+The element 4 is at index of 3
+ */
